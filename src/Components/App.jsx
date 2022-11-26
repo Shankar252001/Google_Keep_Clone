@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Header from "./Header";
 import Footer from "./Footer";
 import Note from "./Note";
-import CreateArea from "./CreateArea";
+import Area from "./Area";
 
 function App() {
   const [notes, setNotes] = useState([]);
@@ -24,7 +24,7 @@ function App() {
   return (
     <div>
       <Header />
-      <CreateArea onAdd={addNote} />
+      <Area onAdd={addNote} />
       {notes.map((note, index) => (
         <Note
           key={index}
